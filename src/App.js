@@ -15,13 +15,19 @@ function App() {
     e.preventDefault();
     if(userDetails.phoneNumber.length !== 10){
       alert("Invalid phone number. Please enter a 10-digit phone number.");
+      return
     }
     let selectedDate = new Date(userDetails.date);
     let today = new Date();
     if(selectedDate > today){
       alert("Invalid date of birth. Date of birth cannot be in the future.");
+      return
     }
     setModalIsOpen(false);
+    let obj={
+      name: '', email: '', date: '', phoneNumber: ''
+    }
+    setUserDetails({obj})
   };
 
   return (
@@ -35,6 +41,7 @@ function App() {
         overlayClassName="overlay"
         ariaHideApp={false} 
       >
+        <div className="modal">
         <div className="modal-content">
         <h2>Fill Details</h2>
         <form onSubmit={handleSubmit} className='form'>
@@ -83,7 +90,7 @@ function App() {
           <button type="submit">Submit</button>
         </form>
         </div>
-      
+        </div>
       </Modal>
     </div>
   );
