@@ -44,9 +44,7 @@ function App() {
       <h1>User Details Modal</h1>
       <button onClick={() => setModalIsOpen(true)}>Open Form</button>
       
-<div className="modal">
 
-<div className="modal-content">
 
 <Modal
   isOpen={modalIsOpen}
@@ -56,6 +54,9 @@ function App() {
   ariaHideApp={false}
   shouldCloseOnOverlayClick={true} 
 >
+<div className="modal">
+
+<div className="modal-content">
   <h2>Fill Details</h2>
   <form onSubmit={handleSubmit} className="form">
     <p>Username:</p>
@@ -96,12 +97,13 @@ function App() {
     />
     <button type="submit" className="submit-button">Submit</button>
   </form>
+  </div>
+
+</div>
 </Modal>
 
 
-</div>
 
-</div>
       
     </div>
   );
