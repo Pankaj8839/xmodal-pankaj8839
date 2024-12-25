@@ -39,7 +39,7 @@ function App() {
         <h2>Fill Details</h2>
         <form onSubmit={handleSubmit} className='form'>
           
-            <p>Name:</p>
+            <p>Username:</p>
             <input
               type="text"
               id="username"
@@ -49,7 +49,7 @@ function App() {
               required
             />
          
-            <p>Email:</p>
+            <p>Email Address:</p>
             <input
               type="email"
               id="email"
@@ -60,9 +60,9 @@ function App() {
             />
        
         
-            <p>Phone</p>
+            <p>Phone Number:</p>
             <input
-              type="number"
+              type="text"
               id="phone"
               name="phoneNumber"
               value={userDetails.phoneNumber}
