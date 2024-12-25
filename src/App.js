@@ -11,6 +11,15 @@ function App() {
     setUserDetails({ ...userDetails, [name]: value });
   };
 
+  const customStyles = {
+    overlay: {
+      backgroundColor: 'rgba(0, 0, 0, 0.5)', 
+    },
+    content: {
+   
+    },
+  };
+
   const handleSubmit = (e) => {
     e.preventDefault();
     if(userDetails.phoneNumber.length !== 10){
@@ -38,7 +47,7 @@ function App() {
         isOpen={modalIsOpen}
         onRequestClose={() => setModalIsOpen(false)}
         className="modal"
-        overlayClassName="overlay"
+        style={customStyles}
         ariaHideApp={false} 
       >
         <div className="modal-content">
