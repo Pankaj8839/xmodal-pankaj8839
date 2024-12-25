@@ -23,8 +23,6 @@ function App() {
       alert('Invalid phone number. Please enter a valid 10-digit number.');
       return;
     }
-
-   =
     const selectedDate = new Date(userDetails.date);
     const today = new Date();
     if (selectedDate > today) {
@@ -59,7 +57,7 @@ function App() {
       <Modal
         isOpen={modalIsOpen}
         onRequestClose={() => setModalIsOpen(false)}
-        className="modal"
+        className="modalmain"
         overlayClassName="overlay"
         ariaHideApp={false}
       >
@@ -103,7 +101,7 @@ function App() {
                 onChange={handleChange}
                 required
               />
-              <button type="submit">Submit</button>
+              <button type="submit" className="submit-button">Submit</button>
             </form>
           </div>
         </div>
