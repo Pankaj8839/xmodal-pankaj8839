@@ -46,10 +46,11 @@ function App() {
       <Modal
         isOpen={modalIsOpen}
         onRequestClose={() => setModalIsOpen(false)}
-        className="modal"
+        className="mainmodal"
         style={customStyles}
         ariaHideApp={false} 
       >
+        <div className='modal'>
         <div className="modal-content">
         <h2>Fill Details</h2>
         <form onSubmit={handleSubmit} className='form'>
@@ -98,6 +99,8 @@ function App() {
           <button type="submit" className='submit-button'>Submit</button>
         </form>
         </div>
+        </div>
+     
      
       </Modal>
     </div>
