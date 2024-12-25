@@ -49,64 +49,55 @@ function App() {
 <div className="modal-content">
 
 <Modal
-        isOpen={modalIsOpen}
-        onRequestClose={() => setModalIsOpen(false)}
-        className="mainmodal"
-        style={customStyles}
-        ariaHideApp={false} 
-      >
-       
-     
-        <h2>Fill Details</h2>
-        <form onSubmit={handleSubmit} className='form'>
-          
-            <p>Username:</p>
-            <input
-              type="text"
-              id="username"
-              name="name"
-              value={userDetails.name}
-              onChange={handleChange}
-              required
-            />
-         
-            <p>Email Address:</p>
-            <input
-              type="email"
-              id="email"
-              name="email"
-              value={userDetails.email}
-              onChange={handleChange}
-              required
-            />
-       
-        
-            <p>Phone Number:</p>
-            <input
-              type="text"
-              id="phone"
-              name="phoneNumber"
-              value={userDetails.phoneNumber}
-              onChange={handleChange}
-              required
-            />
-            
-            <p>Date of Birth:</p>
-            <input
-              type="date"
-              id="dob"
-              name="date"
-              value={userDetails.date}
-              onChange={handleChange}
-              required
-            />
-        
-          <button type="submit" className='submit-button'>Submit</button>
-        </form>
-       
-     
-     
-      </Modal>
+  isOpen={modalIsOpen}
+  onRequestClose={() => setModalIsOpen(false)}
+  className="mainmodal"
+  style={customStyles}
+  ariaHideApp={false}
+  shouldCloseOnOverlayClick={true} 
+>
+  <h2>Fill Details</h2>
+  <form onSubmit={handleSubmit} className="form">
+    <p>Username:</p>
+    <input
+      type="text"
+      id="username"
+      name="name"
+      value={userDetails.name}
+      onChange={handleChange}
+      required
+    />
+    <p>Email Address:</p>
+    <input
+      type="email"
+      id="email"
+      name="email"
+      value={userDetails.email}
+      onChange={handleChange}
+      required
+    />
+    <p>Phone Number:</p>
+    <input
+      type="text"
+      id="phone"
+      name="phoneNumber"
+      value={userDetails.phoneNumber}
+      onChange={handleChange}
+      required
+    />
+    <p>Date of Birth:</p>
+    <input
+      type="date"
+      id="dob"
+      name="date"
+      value={userDetails.date}
+      onChange={handleChange}
+      required
+    />
+    <button type="submit" className="submit-button">Submit</button>
+  </form>
+</Modal>
+
 
 </div>
 
