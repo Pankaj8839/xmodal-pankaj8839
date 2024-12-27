@@ -43,12 +43,13 @@ function App() {
       <button onClick={() => setModalIsOpen(true)}>Open Form</button>
 
       <Modal
-        isOpen={modalIsOpen}
-        onRequestClose={() => setModalIsOpen(false)} 
-        style={customStyles}
-        ariaHideApp={false}
-        shouldCloseOnOverlayClick={true} 
-        className="modal"
+       isOpen={modalIsOpen}
+       onRequestClose={() => setModalIsOpen(false)} 
+       style={customStyles}
+       ariaHideApp={false}
+       shouldCloseOnOverlayClick={true} 
+       className="modal"
+       overlayClassName="modal-overlay" 
       >
         <div className="modal-content">
           <h2>Fill Details</h2>
