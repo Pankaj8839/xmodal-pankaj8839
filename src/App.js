@@ -53,6 +53,7 @@ function App() {
         style={customStyles}
         ariaHideApp={false}
         shouldCloseOnOverlayClick={true}
+        overlayClassName="modal-overlay"
       >
        
 
