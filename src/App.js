@@ -49,12 +49,12 @@ function App() {
       <Modal
         isOpen={modalIsOpen}
         onRequestClose={() => setModalIsOpen(false)}
-        className="mainmodal"
+        className="modal"
         style={customStyles}
         ariaHideApp={false}
         shouldCloseOnOverlayClick={true}
       >
-        <div className="modal">
+       
 
           <div className="modal-content">
             <h2>Fill Details</h2>
@@ -99,7 +99,7 @@ function App() {
             </form>
           </div>
 
-        </div>
+   
       </Modal>
     </div>
   );
