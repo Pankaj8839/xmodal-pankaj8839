@@ -44,7 +44,10 @@ function App() {
 
       <Modal
        isOpen={modalIsOpen}
-       onRequestClose={() => setModalIsOpen(false)} 
+       onRequestClose={() => {
+         console.log('Overlay clicked, closing modal');
+         setModalIsOpen(false);
+       }}
        style={customStyles}
        ariaHideApp={false}
        shouldCloseOnOverlayClick={true} 
