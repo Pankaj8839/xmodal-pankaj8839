@@ -48,10 +48,11 @@ function App() {
           setModalIsOpen(false);
         }}
     
-        className="modal"
+        className="modalmain"
         overlayClassName="modal-overlay"
    
       >
+        <div className='modal'>
         <div className="modal-content">
           <h2>Fill Details</h2>
           <form onSubmit={handleSubmit} className="form">
@@ -95,6 +96,7 @@ function App() {
               Submit
             </button>
           </form>
+        </div>
         </div>
       </Modal>
     </div>
