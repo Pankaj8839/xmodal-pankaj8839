@@ -11,15 +11,15 @@ function App() {
     setUserDetails({ ...userDetails, [name]: value });
   };
 
-  const customStyles = {
-    overlay: {
-      backgroundColor: 'rgba(0, 0, 0, 0.5)',
-      zIndex: 1000
-    },
-    content: {
+  // const customStyles = {
+  //   overlay: {
+  //     backgroundColor: 'rgba(0, 0, 0, 0.5)',
+  //     zIndex: 1000
+  //   },
+  //   content: {
     
-    },
-  };
+  //   },
+  // };
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -43,16 +43,14 @@ function App() {
       <button onClick={() => setModalIsOpen(true)}>Open Form</button>
 
       <Modal
-       isOpen={modalIsOpen}
-       onRequestClose={() => {
-         console.log('Overlay clicked, closing modal');
-         setModalIsOpen(false);
-       }}
-       style={customStyles}
-       ariaHideApp={false}
-       shouldCloseOnOverlayClick={true} 
-       className="modal"
-       overlayClassName="modal-overlay" 
+        isOpen={modalIsOpen}
+        onRequestClose={() => {
+          setModalIsOpen(false);
+        }}
+        shouldCloseOnOverlayClick={true}
+        className="modal"
+        overlayClassName="modal-overlay"
+        ariaHideApp={false}
       >
         <div className="modal-content">
           <h2>Fill Details</h2>
