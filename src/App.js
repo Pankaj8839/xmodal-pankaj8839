@@ -41,8 +41,7 @@ function App() {
     <div className="App">
       <h1>User Details Modal</h1>
       <button onClick={() => setModalIsOpen(true)}>Open Form</button>
-      <div className='modal'>
-      <div className="modal-content">
+
       <Modal
         isOpen={modalIsOpen}
         onRequestClose={() => {
@@ -53,7 +52,8 @@ function App() {
         overlayClassName="modal-overlay"
    
       >
-       
+        <div className='modal'>
+        <div className="modal-content">
           <h2>Fill Details</h2>
           <form onSubmit={handleSubmit} className="form">
             <p>Username:</p>
@@ -96,10 +96,9 @@ function App() {
               Submit
             </button>
           </form>
-       
+        </div>
+        </div>
       </Modal>
-      </div>
-      </div>
     </div>
   );
 }
