@@ -49,7 +49,6 @@ function App() {
         }}
     
         className="modalmain"
-        overlayClassName="modal-overlay"
    
       >
         <div className='modal'>
