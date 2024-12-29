@@ -47,10 +47,10 @@ function App() {
         onRequestClose={() => {
           setModalIsOpen(false);
         }}
-        shouldCloseOnOverlayClick={true}
+    
         className="modal"
         overlayClassName="modal-overlay"
-        ariaHideApp={false}
+   
       >
         <div className="modal-content">
           <h2>Fill Details</h2>
